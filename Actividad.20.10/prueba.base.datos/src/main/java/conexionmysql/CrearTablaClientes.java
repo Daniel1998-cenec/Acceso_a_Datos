@@ -16,7 +16,7 @@ public class CrearTablaClientes {
 				+ "Edad VARCHAR(2))";   	 
 		try {
 		  conn = DriverManager.getConnection(
-             "jdbc:mysql://localhost/empresa1","root","");
+             "jdbc:mysql://localhost/empresa","root","");
 		  stmt = conn.createStatement();
 		  stmt.execute(sql);
 		  System.out.println("Creada la tabla clientes");

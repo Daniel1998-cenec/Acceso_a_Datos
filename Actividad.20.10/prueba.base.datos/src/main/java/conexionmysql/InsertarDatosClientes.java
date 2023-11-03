@@ -10,10 +10,10 @@ public class InsertarDatosClientes {
 		Connection conn = null;
 		Statement stmt = null;  	
 		String sql = "INSERT INTO clientes (id, nif, nombre, edad) " +
-	             "VALUES (1, '11111', 'Alberto', 40)";
+	             "VALUES (3, '333', 'Juan', 43);";
 	try {
 	  conn = DriverManager.getConnection(
-	         "jdbc:mysql://localhost/empresa1","root","");
+	         "jdbc:mysql://localhost/empresa","root","");
 	  stmt = conn.createStatement();
 	  stmt.executeUpdate(sql);
 	  System.out.println("Datos insertados en la tabla clientes");

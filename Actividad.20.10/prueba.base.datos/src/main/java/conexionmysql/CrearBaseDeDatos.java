@@ -10,13 +10,13 @@ public class CrearBaseDeDatos {
 		// TODO Esbozo de método generado automáticamente
 		Connection conn = null;
 		Statement stmt = null;  	
-		String sql="CREATE DATABASE empresa1;";  	 
+		String sql="CREATE DATABASE empresa;";  	 
 
 		try {
 			conn = DriverManager.getConnection("jdbc:mysql://localhost/","root","");
 			stmt = conn.createStatement();
 			stmt.execute(sql);
-			System.out.println("Creada la base de datos empresa1");
+			System.out.println("Creada la base de datos empresa");
 				
 			conn.close();
 			stmt.close();
