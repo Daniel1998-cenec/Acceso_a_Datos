@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 public class InsertarDatosClientes {
-	public static void main(String[] args) throws SQLException {
+	public static void main(String[] args) {
 		// TODO Esbozo de método generado automáticamente
 		Connection conn = null;
 		Statement stmt = null;  	

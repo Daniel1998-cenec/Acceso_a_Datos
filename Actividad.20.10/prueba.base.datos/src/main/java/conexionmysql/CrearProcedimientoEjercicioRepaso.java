@@ -22,7 +22,7 @@ public class CrearProcedimientoEjercicioRepaso {
 			conn=DriverManager.getConnection("jdbc:mysql://localhost/empresa", "root", "");
 			
 			presta =conn.prepareStatement(dropProcedure);
-			presta.executeUpdate();
+			presta.executeUpdate(dropProcedure);
 			
 			presta= conn.prepareStatement(createProcedure);
 			presta.executeUpdate();

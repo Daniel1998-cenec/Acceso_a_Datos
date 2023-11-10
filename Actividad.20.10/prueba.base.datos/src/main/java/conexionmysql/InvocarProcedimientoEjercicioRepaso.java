@@ -16,7 +16,7 @@ public class InvocarProcedimientoEjercicioRepaso {
 		
 		try {
 			conn=DriverManager.getConnection("jdbc:mysql://localhost/empresa", "root", "");
-			cstmt=conn.prepareCall("call calcula_edad(IN fecha_nacimiento int,OUT edad INT)");
+			cstmt=conn.prepareCall("call calcula_edad(?,?)");
 			cstmt.setInt(1, 1977);
 			cstmt.registerOutParameter(12, Types.INTEGER);
 			cstmt.execute();
