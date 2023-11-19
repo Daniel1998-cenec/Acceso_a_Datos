@@ -12,7 +12,7 @@ public class CrearBbDd {
 		// TODO Esbozo de método generado automáticamente
 		Connection conn = null;
 		Statement stmt = null;
-		String sql = "CREATE DATABASE tiendaPc;";
+		String sql = "CREATE DATABASE tiendaPc";
 
 		try {
 			conn = DriverManager.getConnection("jdbc:mysql://localhost/", "root", "");
