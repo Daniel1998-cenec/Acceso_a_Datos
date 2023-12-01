@@ -1,9 +1,11 @@
-package ficheros.y.directorios;
+package actividad112;
 
 import java.io.File;
 import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
+
+// No EJECUTARLO
 
 public class BorrarCarpeta7 {
 
