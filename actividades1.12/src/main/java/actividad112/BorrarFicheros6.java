@@ -12,7 +12,7 @@ public class BorrarFicheros6 {
 
 		File fichero = new File(rutaFichero);
 
-		if (fichero.exists()) {
+		if (fichero.exists()&& fichero.isDirectory()) {
 			boolean borrado = fichero.delete();
 			if (borrado) {
 				System.out.println("El fichero ha sido borrado con éxito");
