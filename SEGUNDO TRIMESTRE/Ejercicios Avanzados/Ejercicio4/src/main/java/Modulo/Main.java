@@ -1,5 +1,7 @@
 package Modulo;
 
+import java.sql.Date;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -8,6 +10,7 @@ import org.hibernate.engine.spi.SessionFactoryImplementor;
 
 import Modulo.Fabricante;
 import Modulo.Productos;
+import Modulo.Compra;
 
 public class Main {
 
@@ -20,7 +23,7 @@ public class Main {
 				try {
 					//FABRICANTE****************************************************
 		            // Crear objeto fabricante
-		           	Fabricante fabricante = new Fabricante("pc gaming3");
+		           	Fabricante fabricante = new Fabricante("pc gaming4");
 
 		        	// Obtener la sesión actual
 		        	Session session = context.currentSession();
@@ -37,7 +40,7 @@ public class Main {
 		        	//PRODUCTOS**********************************
 		        	// Crear objeto producto
 		        
-		        	Productos producto = new Productos("PORTATIL gaming3", 3000.00, fabricante);
+		        	Productos producto = new Productos("PORTATIL gaming4", 3000.00, fabricante);
 
 		        	// Obtener la sesión actual
 		        	Session session1 = context.currentSession();
@@ -50,6 +53,25 @@ public class Main {
 
 		        	// Hacer commit de la transacción
 		        	session1.getTransaction().commit();	
+		        	
+		        	// Crear objeto compras
+		           	Compra compra = new Compra(Date.valueOf("2024-01-03"),1,producto);
+
+		        	// Obtener la sesión actual
+		        	Session session2 = context.currentSession();
+
+		        	// Iniciar transacción
+		        	session2.beginTransaction();
+
+		        	// Guardar objeto fabricante en la base de datos
+		        	session2.save(compra);      	     	
+
+		        	// Hacer commit de la transacción
+		        	session2.getTransaction().commit();
+		        	System.out.println(compra.toString());
+		        	
+		        	System.out.println(producto.toString());
+		        	System.out.println(fabricante.toString());
 					
 				}catch(Exception e) {
 					e.printStackTrace();

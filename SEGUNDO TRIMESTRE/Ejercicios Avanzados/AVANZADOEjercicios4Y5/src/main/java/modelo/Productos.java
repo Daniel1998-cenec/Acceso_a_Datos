@@ -1,5 +1,4 @@
-package Modulo;
-
+package modelo;
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,8 +18,8 @@ public class Productos {
     @JoinColumn(name = "codigo_fabricante", nullable = false)
     private Fabricante fabricante;
 
-    //@OneToMany(mappedBy = "producto", cascade = CascadeType.ALL)
-    //private List<Compra> compras = new ArrayList<>();
+    @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL)
+    private List<Compra> compras = new ArrayList<>();
     
     @Column(name = "nombre")
     private String nombre;

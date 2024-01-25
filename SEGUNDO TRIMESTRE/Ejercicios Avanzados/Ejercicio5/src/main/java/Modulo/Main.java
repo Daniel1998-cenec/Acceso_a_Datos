@@ -14,17 +14,17 @@ SessionFactory sessionFactory= new Configuration().configure().buildSessionFacto
 		ThreadLocalSessionContext context = new ThreadLocalSessionContext ((SessionFactoryImplementor) sessionFactory);
 				context.bind(sessionFactory.openSession());
 				try {
-					Productos productos=new Productos ("Portatil Omnio", "Portatil 64 Gigas", 1200.0, "HP", 20);
+					Autor Autor=new Autor ("Daniel","Vargas");
 					
 					Session session = context.currentSession();
 					
 					session.beginTransaction();
 					
-					session.save(productos);
+					session.save(Autor);
 					
 					session.getTransaction().commit();
 					
-					System.out.println("Productos: "+productos);
+					System.out.println("Autor: "+Autor);
 				}catch(Exception e) {
 					e.printStackTrace();
 				}finally {

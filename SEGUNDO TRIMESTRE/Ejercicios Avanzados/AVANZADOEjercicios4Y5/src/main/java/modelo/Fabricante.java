@@ -1,4 +1,4 @@
-package Modulo;
+package modelo;
 
 import java.util.*;
 
