@@ -13,5 +13,11 @@
 		<property name="current_session_context_class">thread</property>
 
 		<mapping class="Modulo.Autor" />
+		<mapping class="Modulo.Categoria" />
+		<mapping class="Modulo.Libro" />
+		<mapping class="Modulo.Cliente" />
+		<mapping class="Modulo.Pedido" />
+		<mapping class="Modulo.DetallePedido" />
+		
 	</session-factory>
 </hibernate-configuration>
