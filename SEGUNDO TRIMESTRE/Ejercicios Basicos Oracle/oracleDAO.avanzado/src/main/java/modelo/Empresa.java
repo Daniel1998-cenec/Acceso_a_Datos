@@ -13,12 +13,6 @@ public class Empresa {
     // Constructor sin argumentos requerido por Hibernate
     public Empresa() {
     }
-    
-    public Empresa(int id, String nombre, String pais) {
-    	this.id=id;
-    	this.nombre=nombre;
-    	this.pais=pais;
-    }
 
     // Otros constructores y métodos getter/setter
 
@@ -26,7 +20,14 @@ public class Empresa {
         return id;
     }
 
-    public void setId(int id) {
+    public Empresa(int id, String nombre, String pais) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.pais = pais;
+	}
+
+	public void setId(int id) {
         this.id = id;
     }
 
@@ -45,4 +46,4 @@ public class Empresa {
     public void setPais(String pais) {
         this.pais = pais;
     }
-}
+}    
