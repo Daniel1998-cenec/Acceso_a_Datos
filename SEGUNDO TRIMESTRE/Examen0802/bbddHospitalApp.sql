@@ -10,7 +10,8 @@ CREATE TABLE pacientes (
     Apellidos VARCHAR(50),
     Ciudad VARCHAR(50),
     Direccion VARCHAR(50),
-    Edad VARCHAR(50),
+    Telefono int(9),
+    Edad int(3),
     Historial varchar(50)
 );
 
